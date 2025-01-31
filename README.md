@@ -1,5 +1,103 @@
 # Trabalho de Mineração de Dados e Aplicações na Engenharia
 
+Este projeto explora a aplicação de técnicas de Análise de Componentes Principais (PCA) e Análise de Componentes Independentes (ICA) para reduzir artefatos em sinais de Eletrocardiograma (ECG) obtidos por dispositivos vestíveis. O estudo utiliza dados do conjunto **ScientISST MOVE** para avaliar a eficácia dessas técnicas em ambientes ambulatoriais dinâmicos.
+
+![ECG Processado com PCA e ICA](Documentos/Figure_1.png)  
+*Figura 1: Comparação do sinal original de ECG com os resultados de PCA e ICA.*
+
+---
+
+## Sumário
+1. [Visão Geral do Projeto](#visão-geral-do-projeto)
+2. [Fundamentação Teórica](#fundamentação-teórica)
+3. [Metodologia](#metodologia)
+4. [Resultados](#resultados)
+5. [Discussão e Conclusão](#discussão-e-conclusão)
+6. [Como Reproduzir o Estudo](#como-reproduzir-o-estudo)
+7. [Reconhecimentos e Direitos Autorais](#reconhecimentos-e-direitos-autorais)
+8. [Copyright/License](#copyright/license)
+---
+
+## Visão Geral do Projeto
+**Objetivo**:  
+Reduzir artefatos de movimento em sinais de ECG coletados por dispositivos vestíveis, aprimorando a precisão para diagnóstico clínico.
+
+**Problema**:  
+Dispositivos ambulatoriais enfrentam interferências (e.g., movimentos corporais), que distorcem os sinais de ECG.  
+
+**Técnicas Utilizadas**:  
+- **PCA**: Simplifica os dados identificando componentes de maior variância.
+- **ICA**: Separa fontes estatisticamente independentes no sinal.
+
+**Base de Dados**:  
+[ScientISST MOVE](https://physionet.org/content/scientisst-move-biosignals/1.0.0/) (PhysioNet), contendo registros de ECG, EMG, PPG e acelerômetros durante atividades cotidianas.
+
+---
+
+## Fundamentação Teórica
+### PCA (Análise de Componentes Principais)
+- **Função**: Reduz dimensionalidade preservando a variância máxima.
+- **Aplicação no ECG**: Identifica padrões dominantes (e.g., batimentos cardíacos) e atenua ruídos de baixa variância.
+
+### ICA (Análise de Componentes Independentes)
+- **Função**: Isola fontes independentes misturadas no sinal.
+- **Aplicação no ECG**: Separa o sinal cardíaco de interferências (e.g., movimento muscular).
+
+---
+
+## Metodologia
+### Fluxo do Projeto
+1. **Coleta de Dados**:  
+   - Dados do ScientISST MOVE (10.5 horas de registros de 17 voluntários).
+   - Atividades: caminhar, correr, gestos, etc.
+
+2. **Pré-processamento**:  
+   - Normalização do sinal.
+   - Filtragem para remoção de ruído de alta frequência.
+
+3. **Aplicação de PCA e ICA**:  
+   - **PCA**: Seleção de componentes principais que explicam 95% da variância.
+   - **ICA**: Uso do algoritmo FastICA para extrair componentes independentes.
+
+---
+
+## Resultados
+### Comparação Visual dos Sinais
+- **PCA**: Preserva a estrutura geral do ECG, mas suaviza detalhes.
+- **ICA**: Isola efetivamente o sinal cardíaco de artefatos (e.g., movimento).
+
+![Sinal Original vs. Processado](Documentos/Figure_1.png)
+
+---
+
+## Discussão e Conclusão
+**Principais Conclusões**:  
+- **PCA**: Ideal para simplificação rápida, mas perde detalhes sutis.
+- **ICA**: Superior na separação de fontes, porém computacionalmente intensivo.
+
+**Trabalho Futuro**:  
+- Combinação de PCA/ICA com redes neurais para classificação de anomalias.
+
+---
+
+## Como Reproduzir o Estudo
+### Requisitos
+- Python 3.13
+- Bibliotecas: `mne`, `numpy`, `scikit-learn`, `matplotlib`
+
+### Passos
+1. **Clonar o Repositório**:  
+   ```bash
+   git clone https://github.com/hreis1/data-mining.git
+   cd data-mining
+   ```
+
+2. **Executar o Código**:  
+   ```bash
+   python3.13 Codigos/main.py
+   ```
+---
+
 ## Reconhecimentos e Direitos Autorais
 
 - **@autor**: Paulo Henrique Reis | Renata Costa Rocha
