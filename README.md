@@ -6,8 +6,8 @@
 - **@contato**: hreispaulo1@gmail.com | renata.rocha@discente.ufma.br
 - **@data última versão**: 30/01/2025
 - **@versão**: 0.1
-- **@Agradecimentos**: Universidade Federal d- **@outros repositórios**: o Maranhão (UFMA), Professor Doutor Thales Levi Azevedo Valente, e colegas de curso.
-
+- **outros repositórios**: [ScientISST-MOVE](https://github.com/scientisst/ScientISST-MOVE)
+- **Agradecimentos**: Universidade Federal do Maranhão (UFMA), Professor Doutor Thales Levi Azevedo Valente, e colegas de curso.
 ---
 
 ## Copyright/License
