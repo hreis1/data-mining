@@ -54,8 +54,8 @@ A mineração de dados é crucial para melhorar a qualidade dos sinais de eletro
 ## Metodologia
 ### Fluxo do Projeto
 1. **Coleta de Dados**:
-   - Dados do ScientISST MOVE (10.5 horas de registros de 17 voluntários).
-   - Atividades: caminhar, correr, gestos, etc.
+- Dados do ScientISST MOVE (10.5 horas de registros de 17 voluntários).
+- - Atividades: caminhar, correr, gestos, etc.
 
 3. **Pré-processamento**:  
    Carregar o Arquivo EDF: O arquivo EDF contendo os dados de ECG é carregado na memória usando a biblioteca mne.
