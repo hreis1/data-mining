@@ -55,25 +55,25 @@ A mineração de dados é crucial para melhorar a qualidade dos sinais de eletro
 ### Fluxo do Projeto
 1. **Coleta de Dados**:
 - Dados do ScientISST MOVE (10.5 horas de registros de 17 voluntários).
-- - Atividades: caminhar, correr, gestos, etc.
+- Atividades: caminhar, correr, gestos, etc.
 
 3. **Pré-processamento**:  
-   Carregar o Arquivo EDF: O arquivo EDF contendo os dados de ECG é carregado na memória usando a biblioteca mne.
-   Definir o Intervalo de Tempo: Define-se o intervalo de tempo de interesse para focar nos primeiros 10 segundos dos dados de ECG.
-   Obter os Dados: Extrai-se os dados brutos de ECG do objeto raw.
-   Normalizar os Sinais: Os sinais são normalizados para ter amplitudes iguais, dividindo cada sinal pelo seu valor absoluto máximo. Isso garante que todos os sinais estejam na mesma escala.
-   Calcular Características: Calcula-se a média, variância, mediana e curtose dos sinais normalizados, o que pode ser útil para análise e interpretação dos dados.
+- Carregar o Arquivo EDF: O arquivo EDF contendo os dados de ECG é carregado na memória usando a biblioteca mne.
+- Definir o Intervalo de Tempo: Define-se o intervalo de tempo de interesse para focar nos primeiros 10 segundos dos dados de ECG.
+- Obter os Dados: Extrai-se os dados brutos de ECG do objeto raw.
+- Normalizar os Sinais: Os sinais são normalizados para ter amplitudes iguais, dividindo cada sinal pelo seu valor absoluto máximo. Isso garante que todos os sinais estejam na mesma escala.
+- Calcular Características: Calcula-se a média, variância, mediana e curtose dos sinais normalizados, o que pode ser útil para análise e interpretação dos dados.
 
 4. **Processamento:**
    **Aplicação de PCA e ICA**:  
-   **PCA**: Seleção de componentes principais que explicam 95% da variância.A Análise de Componentes Principais (PCA) é aplicada aos dados normalizados para reduzir a dimensionalidade, identificando os componentes principais que explicam a maior parte da variância nos dados.
-   **ICA**: Uso do algoritmo FastICA para extrair componentes independentes. A Análise de Componentes Independentes (ICA) é aplicada para decompor os dados normalizados em componentes independentes, separando as fontes independentes presentes no sinal de ECG.
+- **PCA**: Seleção de componentes principais que explicam 95% da variância.A Análise de Componentes Principais (PCA) é aplicada aos dados normalizados para reduzir a dimensionalidade, identificando os componentes principais que explicam a maior parte da variância nos dados.
+- **ICA**: Uso do algoritmo FastICA para extrair componentes independentes. A Análise de Componentes Independentes (ICA) é aplicada para decompor os dados normalizados em componentes independentes, separando as fontes independentes presentes no sinal de ECG.
 
 5. **Plotagem dos Sinais:** Quatro gráficos são gerados para visualizar os diferentes sinais de ECG:
-Sinal original
-Sinal processado pelo PCA
-Sinal processado pelo ICA
-Comparação entre os três sinais
+- Sinal original
+- Sinal processado pelo PCA
+- Sinal processado pelo ICA
+- Comparação entre os três sinais
      
 ---
 
