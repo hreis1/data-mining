@@ -1,4 +1,4 @@
-# Trabalho de Mineração de Dados e Aplicações na Engenharia
+# ESTRATÉGIAS DE MINERAÇÃO DE DADOS PARA A ATENUAÇÃO DE ARTEFATOS EM ECG DE WEARABLES: APRIMORANDO A QUALIDADE DO SINAL PARA DIAGNÓSTICO CLÍNICO.
 
 Este projeto explora a aplicação de técnicas de Análise de Componentes Principais (PCA) e Análise de Componentes Independentes (ICA) para reduzir artefatos em sinais de Eletrocardiograma (ECG) obtidos por dispositivos vestíveis. O estudo utiliza dados do conjunto **ScientISST MOVE** para avaliar a eficácia dessas técnicas em ambientes dinâmicos.
 
