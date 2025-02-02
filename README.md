@@ -88,9 +88,9 @@ A mineração de dados é crucial para melhorar a qualidade dos sinais de eletro
 
 ## Discussão e Conclusão
 **Principais Conclusões**:  
-**PCA**: Ideal para simplificação rápida, mas perde detalhes sutis.
-**ICA**: Superior na separação de fontes, porém computacionalmente intensivo.
-A investigação metodológica evidencia a importância de selecionar técnicas de mineração de dados apropriadas com base nos objetivos da análise e nas características do sinal. A inovação contínua e o aprimoramento dessas técnicas são essenciais para o desenvolvimento de dispositivos vestíveis mais eficazes no monitoramento da saúde cardiovascular. A incorporação de dispositivos vestíveis é fundamental para aprimorar a precisão na monitorização contínua do ECG, tornando-se um componente essencial na busca por resultados mais precisos e confiáveis no monitoramento cardíaco. Esses avanços têm o potencial de revolucionar a interpretação de registros cardíacos, contribuindo para a melhoria da saúde cardiovascular dos pacientes e aprimorando a qualidade dos diagnósticos clínicos. 
+- **PCA**: Ideal para simplificação rápida, mas perde detalhes sutis.
+- **ICA**: Superior na separação de fontes, porém computacionalmente intensivo.
+- A investigação metodológica evidencia a importância de selecionar técnicas de mineração de dados apropriadas com base nos objetivos da análise e nas características do sinal. A inovação contínua e o aprimoramento dessas técnicas são essenciais para o desenvolvimento de dispositivos vestíveis mais eficazes no monitoramento da saúde cardiovascular. A incorporação de dispositivos vestíveis é fundamental para aprimorar a precisão na monitorização contínua do ECG, tornando-se um componente essencial na busca por resultados mais precisos e confiáveis no monitoramento cardíaco. Esses avanços têm o potencial de revolucionar a interpretação de registros cardíacos, contribuindo para a melhoria da saúde cardiovascular dos pacientes e aprimorando a qualidade dos diagnósticos clínicos. 
 
 **Trabalho Futuro**:  
 Combinação de PCA/ICA com redes neurais para classificação de anomalias.
