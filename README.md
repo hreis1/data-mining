@@ -1,6 +1,6 @@
 # Trabalho de Mineração de Dados e Aplicações na Engenharia
 
-Este projeto explora a aplicação de técnicas de Análise de Componentes Principais (PCA) e Análise de Componentes Independentes (ICA) para reduzir artefatos em sinais de Eletrocardiograma (ECG) obtidos por dispositivos vestíveis. O estudo utiliza dados do conjunto **ScientISST MOVE** para avaliar a eficácia dessas técnicas em ambientes ambulatoriais dinâmicos.
+Este projeto explora a aplicação de técnicas de Análise de Componentes Principais (PCA) e Análise de Componentes Independentes (ICA) para reduzir artefatos em sinais de Eletrocardiograma (ECG) obtidos por dispositivos vestíveis. O estudo utiliza dados do conjunto **ScientISST MOVE** para avaliar a eficácia dessas técnicas em ambientes dinâmicos.
 
 ![ECG Processado com PCA e ICA](Documentos/Figure_1.png)  
 *Figura 1: Comparação do sinal original de ECG com os resultados de PCA e ICA.*
