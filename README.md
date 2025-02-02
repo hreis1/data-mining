@@ -26,8 +26,10 @@ Reduzir artefatos de movimento em sinais de ECG coletados por dispositivos vest�
 Dispositivos ambulatoriais enfrentam interferências (e.g., movimentos corporais), que distorcem os sinais de ECG.  
 
 **Técnicas Utilizadas**:  
-- **PCA**: Simplifica os dados identificando componentes de maior variância.
-- **ICA**: Separa fontes estatisticamente independentes no sinal.
+- **Pré-processamento**
+- -**Processamento**
+- **PCA:** Simplifica os dados identificando componentes de maior variância.
+- **ICA:** Separa fontes estatisticamente independentes no sinal.
 
 **Base de Dados**:  
 [ScientISST MOVE](https://physionet.org/content/scientisst-move-biosignals/1.0.0/) (PhysioNet), contendo registros de ECG, EMG, PPG e acelerômetros durante atividades cotidianas.
@@ -35,6 +37,8 @@ Dispositivos ambulatoriais enfrentam interferências (e.g., movimentos corporais
 ---
 
 ## Fundamentação Teórica
+### **MINERAÇÃO DE DADOS:**A mineração de dados é crucial para melhorar a qualidade dos sinais de eletrocardiograma (ECG) capturados por dispositivos vestíveis. Esses sinais frequentemente contêm artefatos causados por ruídos ambientais, movimentos do usuário e outras atividades fisiológicas. Estratégias como a análise de componentes principais (PCA) e a análise de componentes independentes (ICA) são utilizadas para identificar e atenuar esses artefatos, resultando em sinais de ECG mais puros e interpretáveis.A aplicação dessas técnicas de mineração de dados tem um impacto significativo na prática clínica, proporcionando leituras de ECG mais precisas e confiáveis. Isso facilita o diagnóstico e o monitoramento contínuo de condições cardiovasculares. Além disso, a integração dessas técnicas com inteligência artificial automatiza o processo de análise, tornando-o mais eficiente e acessível.O pré-processamento de sinais de eletrocardiograma (ECG) é uma etapa crucial para garantir a qualidade dos dados antes da aplicação de técnicas mais avançadas de mineração de dados. O objetivo do pré-processamento é preparar o sinal bruto, atenuando ou eliminando artefatos e ruídos que possam comprometer a análise subsequente.
+
 ### PCA (Análise de Componentes Principais)
 - **Função**: Reduz dimensionalidade preservando a variância máxima.
 - **Aplicação no ECG**: Identifica padrões dominantes (e.g., batimentos cardíacos) e atenua ruídos de baixa variância.
@@ -52,13 +56,24 @@ Dispositivos ambulatoriais enfrentam interferências (e.g., movimentos corporais
    - Atividades: caminhar, correr, gestos, etc.
 
 2. **Pré-processamento**:  
-   - Normalização do sinal.
-   - Filtragem para remoção de ruído de alta frequência.
 
-3. **Aplicação de PCA e ICA**:  
-   - **PCA**: Seleção de componentes principais que explicam 95% da variância.
-   - **ICA**: Uso do algoritmo FastICA para extrair componentes independentes.
+   - Carregar o Arquivo EDF: O arquivo EDF contendo os dados de ECG é carregado na memória usando a biblioteca mne.
+   - Definir o Intervalo de Tempo: Define-se o intervalo de tempo de interesse para focar nos primeiros 10 segundos dos dados de ECG.
+   - Obter os Dados: Extrai-se os dados brutos de ECG do objeto raw.
+   - Normalizar os Sinais: Os sinais são normalizados para ter amplitudes iguais, dividindo cada sinal pelo seu valor absoluto máximo. Isso garante que todos os sinais estejam na mesma escala.
+   - Calcular Características: Calcula-se a média, variância, mediana e curtose dos sinais normalizados, o que pode ser útil para análise e interpretação dos dados.
 
+3. **Processamento:**
+   - **Aplicação de PCA e ICA**:  
+     **PCA**: Seleção de componentes principais que explicam 95% da variância.A Análise de Componentes Principais (PCA) é aplicada aos dados normalizados para reduzir a dimensionalidade, identificando os componentes principais que explicam a maior parte da variância nos dados.
+     **ICA**: Uso do algoritmo FastICA para extrair componentes independentes. A Análise de Componentes Independentes (ICA) é aplicada para decompor os dados normalizados em componentes independentes, separando as fontes independentes presentes no sinal de ECG.
+
+4. **Plotagem dos Sinais:** Quatro gráficos são gerados para visualizar os diferentes sinais de ECG:
+   - Sinal original
+   - Sinal processado pelo PCA
+   - Sinal processado pelo ICA
+   - Comparação entre os três sinais
+     
 ---
 
 ## Resultados
@@ -74,6 +89,7 @@ Dispositivos ambulatoriais enfrentam interferências (e.g., movimentos corporais
 **Principais Conclusões**:  
 - **PCA**: Ideal para simplificação rápida, mas perde detalhes sutis.
 - **ICA**: Superior na separação de fontes, porém computacionalmente intensivo.
+- A investigação metodológica evidencia a importância de selecionar técnicas de mineração de dados apropriadas com base nos objetivos da análise e nas características do sinal. A inovação contínua e o aprimoramento dessas técnicas são essenciais para o desenvolvimento de dispositivos vestíveis mais eficazes no monitoramento da saúde cardiovascular. A incorporação de dispositivos vestíveis é fundamental para aprimorar a precisão na monitorização contínua do ECG, tornando-se um componente essencial na busca por resultados mais precisos e confiáveis no monitoramento cardíaco. Esses avanços têm o potencial de revolucionar a interpretação de registros cardíacos, contribuindo para a melhoria da saúde cardiovascular dos pacientes e aprimorando a qualidade dos diagnósticos clínicos. 
 
 **Trabalho Futuro**:  
 - Combinação de PCA/ICA com redes neurais para classificação de anomalias.
