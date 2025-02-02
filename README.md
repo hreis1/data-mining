@@ -25,7 +25,7 @@ Este projeto explora a aplicação de técnicas de Análise de Componentes Princ
 Reduzir artefatos de movimento em sinais de ECG coletados por dispositivos vestíveis, aprimorando a precisão para diagnóstico clínico.
 
 **Problema**:  
-Dispositivos ambulatoriais enfrentam interferências (e.g., movimentos corporais), que distorcem os sinais de ECG.  
+Dispositivos vestíveis enfrentam interferências (e.g., movimentos corporais), que distorcem os sinais de ECG.  
 
 **Técnicas Utilizadas**:  
 - **Pré-processamento**
